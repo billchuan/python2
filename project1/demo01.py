@@ -6,6 +6,6 @@ b=input("买了条鱼花了:")
 
 c=float(a)+float(b)
 
-print("总共消费:%.2f"%c)
+print("总共消费:%.02f"%c)
 
 
