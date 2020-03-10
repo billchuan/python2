@@ -1,5 +1,6 @@
 i=1
-
-while i<=5:
-    print("hello world")
+sum=0
+while i<=100:
+    sum=sum+i
     i=i+1
+print("1-100和为:%d"%sum)
