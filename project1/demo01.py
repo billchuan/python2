@@ -1,11 +1,6 @@
-print("小明去菜市场买菜")
-
-a=input("买了颗白菜花了:")
-
-b=input("买了条鱼花了:")
-
-c=float(a)+float(b)
-
-print("总共消费:%.02f"%c)
-
-
+age=input("输入用户年龄:")
+age1=int(age)
+if age1>=18:
+    print("可以喝酒")
+else:
+    print("请喝果汁")
