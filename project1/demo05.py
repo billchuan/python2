@@ -10,7 +10,6 @@
 
 
 
-
 '''break关键字练习
 i=0
 while i<10:
@@ -28,4 +27,9 @@ while i<10:
      if i==6:
         i+=1
         continue
+'''
+'''for循环
+j="Hello python"
+for i  in j :
+    print(i)
 '''

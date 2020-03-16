@@ -2,8 +2,8 @@ import turtle
 import time
 
 turtle.pensize(5)
-turtle.pencolor("yellow") #画笔黄色
-turtle.fillcolor("red") #内部填充红色
+turtle.penjor("yellow") #画笔黄色
+turtle.filljor("red") #内部填充红色
 
 
 turtle.begin_fill()
