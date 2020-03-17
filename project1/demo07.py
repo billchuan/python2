@@ -1,21 +1,23 @@
 # 封装参数练习
-def hello_world(s1,s2):
+"""def hello_world(s1,s2):
     print(s1)
     print(s2)
 
 
-hello_world(1,2)
+hello_world(1,2)"""
 
-"""无参函数练习
+"""无参函数练习"""
 
 
-def printNum(max):
+def print_Num(max):
     for i in range(1, max):
         print("i=%d" % i, end=" ")
 
 
-printNum(5)
-"""
+print_Num(5)
+
+
+
 '''参数返回函数练习
 
 
