@@ -34,8 +34,47 @@
 
 
 # 练习1
-def print_info(class_num, name):
-    print("欢迎%d班%s同学进入Python直播间" % (class_num, name))
+# def print_info(class_num, name):
+#     print("欢迎%d班%s同学进入Python直播间" % (class_num, name))
+#
+#
+# print_info(21810, "张三")
 
 
-print_info(21810, "张三")
+# 返回值
+# def sum_1(n1, n2):
+#     """计算两个数的和"""
+#     result = n1 + n2
+#     print("%d+%d=%d" % (n1, n2, result))
+#     return
+#
+#
+# sum_1(1, 2)
+
+
+# 1、有返回值
+# def sum_1(n1, n2):
+#     """计算两个数的和"""
+#     result = n1 + n2
+#     if n2 == 2:
+#         return 1
+#     elif n2 == 1:
+#         return result
+#
+#
+# value = sum_1(1, 1)
+# print(value)
+
+
+# 练习2
+def get_info(name, sex):
+    if sex == "男":
+        return "欢迎%s男士光临本直播间" % name
+    else:
+        return "欢迎%s女士光临本直播间" % name
+
+
+value = get_info("张三", "男")
+value1 = get_info("李四", "女")
+print(value)
+print(value1)
