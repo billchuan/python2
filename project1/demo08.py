@@ -11,6 +11,7 @@
 #
 # sum_2()
 
+
 # 2、修改函数，提高该函数的通用性，使其能计算任意2个数的和
 
 # def sum_2(n1, n2):
@@ -30,3 +31,11 @@
 #
 #
 # print_stu_info("lisi", 17)
+
+
+# 练习1
+def print_info(class_num, name):
+    print("欢迎%d班%s同学进入Python直播间" % (class_num, name))
+
+
+print_info(21810, "张三")
