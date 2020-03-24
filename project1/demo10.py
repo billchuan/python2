@@ -30,12 +30,24 @@
 
 
 # 函数递归
-def print_num(num):
-    if num == 4:
-        return
-    print(num)
-    print_num(num + 1)
-    print(num)
+# def print_num(num):
+#     if num == 4:
+#         return
+#     print(num)
+#     print_num(num + 1)
+#     print(num)
+#
+#
+# print_num(1)
 
 
-print_num(1)
+# 计算和
+def sum_num(num):
+    if num == 1:
+        return 1
+    result = num + sum_num(num - 1)
+    return result
+
+
+r2 = sum_num(3)
+print(r2)
