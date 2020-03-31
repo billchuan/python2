@@ -56,3 +56,34 @@ def count_days(y, m, d):
     return days
 
 
+def count_week(y, m):
+    w = (y - 1) + (y - 1) // 400 + (y - 1) // 4 - (y - 1) // 100 + count_days(y, m, 1)
+    return w % 7
+
+
+def print_month(y, m):
+    print("%-6s%-6s%-6s%-6s%-6s%-6s%-6s" % ("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"))
+    # 计算并对改月的1号进行处理
+    w = count_week(y, m)
+    for i in range(w):
+        print("%-6s" % " ", end="")
+
+    md = max_days(y, m)
+    for d in range(1, md + 1):
+        print("%-6s" % d, end="")
+        w = w + 1
+        if w % 7 == 0:
+            print()
+
+
+y = input("请输入年份:")
+y = int(y)
+
+print()
+
+for m in range(1, 13):
+    print()
+    print("-------------", y, "年", m, "月", "-------------")
+    print_month(y, m)
+
+print()
