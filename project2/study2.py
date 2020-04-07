@@ -10,7 +10,22 @@
 # print(a.split("-"))
 
 # 列表
-name_list1 = ["zs", "ls", 12]
+name_list1 = ["zs", "ls", 12, "zs"]
 # 列表的取值
-print(name_list1[2])
+# print(name_list1[2])
+
+# 列表的索引
+# print(name_list1.index("zs"))
+
+# 列表的修改
+# name_list1[0] = "xiaoming"
+# print(name_list1)
+
+# 列表的增加
+# append插入到结尾
+name_list1.append("王麻子")
+# print(name_list1)
+# 某个位置插入
+name_list1.insert(1, "刘能")
+print(name_list1)
 
