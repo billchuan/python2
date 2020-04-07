@@ -19,10 +19,11 @@ tuple_one = (18)
 # print(type(tuple_one))
 
 # 取值
-tuple_1 = ("张三", "李四", 123, "王五")
+tuple_1 = ("张三", "李四", 123, "王五", "张三", "张三1")
 # print(tuple_1[2])
 
 # 取索引号
-print(tuple_1.index("王五"))
+# print(tuple_1.index("王五"))
 
-
+# 计算元组中某一元素的个数
+print(tuple_1.count("张三"))
