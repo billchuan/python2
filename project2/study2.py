@@ -8,3 +8,9 @@
 # 习题2
 # a = "hao-hao-xue-xi-tian-tian-xiang-shang"
 # print(a.split("-"))
+
+# 列表
+name_list1 = ["zs", "ls", 12]
+# 列表的取值
+print(name_list1[2])
+
