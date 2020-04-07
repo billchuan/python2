@@ -26,4 +26,24 @@ tuple_1 = ("张三", "李四", 123, "王五", "张三", "张三1")
 # print(tuple_1.index("王五"))
 
 # 计算元组中某一元素的个数
-print(tuple_1.count("张三"))
+# print(tuple_1.count("张三"))
+
+# 习题2
+# name_list = ["zs", "ls", "ww", "xl", "xz", "ls"]
+# for i in name_list:
+#     print(i, end=" ")
+
+# 练习
+tuple_2 = ("张三", "李四", 123, "王五", "张三", 12.3)
+# for i in tuple_2:
+#     print("我的名字叫", i, sep=":")
+
+name = "zhangsan"
+age = 18
+tel = 11011111
+
+# print("我的名字叫:%s,我的年龄是%d,我的电话是:%d" % (name, age, tel))
+
+# 元组不能修改
+tuple_2[0] = "lisi"
+# print(tuple_2)
