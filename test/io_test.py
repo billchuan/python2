@@ -11,5 +11,5 @@ if __name__ == "__main__":
         fp.write(ch)
         fp.write("\n")
         stdout.write(ch)
-        ch =input(" ")
+        ch = input(" ")
     fp.close()
