@@ -26,6 +26,13 @@
 # r = str1.replace("21810", "21809")
 # print(r)
 
+# 合并字符串
+# s1 = " "
+# s2 = "="
+# list_1 = ["zs", "ls", "ww", "ln"]
+# r = s1.join(list_1)
+# print(r)
+
 # 拆分字符串,不写默认分隔符
 # s1 = "zs ls ww ln"
 # s1_list = s1.split()
