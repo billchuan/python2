@@ -50,8 +50,32 @@
 #     print("%s:%s" % (i, dic_1[i]))
 
 # 字典和列表的联合应用
-dic_1 = {"name": "zs","sex": "男","age": 18}
-dic_2 = {"name": "ls","sex": "男","age": 17}
-dic_3 = {"name": "ww","sex": "男","age": 16}
+# dic_1 = {"name": "zs","sex": "男","age": 18}
+# dic_2 = {"name": "ls","sex": "男","age": 17}
+# dic_3 = {"name": "ww","sex": "男","age": 16}
+
+# 集合的创建(无序不重复)
+# 1)
+# set_1 = {1, 2, "zs", 17}
+# print(type(set_1))
+# print(set_1)
+
+# 2)
+# set_2 = set("hello")
+# print(set_2)
+
+# 添加
+# set_1 = {1, 2, 3}
+# # set_1.add(4)
+# # set_1.update("4","5")
+# tup_1={6,7,8}
+# set_1.update(tup_1)
+# print(set_1)
+
+# 移除
+set_1={1,2,3}
+set_1.remove(3)
+print(set_1)
+
 
 
