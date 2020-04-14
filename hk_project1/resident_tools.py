@@ -17,16 +17,14 @@ def new_resident():
     """新增居民"""
     print("*" * 33)
     name_str = input("请输入姓名:")
-    sex_str = input("请输入性别:")
-    age_str = input("请输入年龄:")
-    tel_str= input("请输入电话:")
-    addr_str=input("请输入地址:")
+    add_str = input("请输入小区名:")
+    stais_num_str = input("请输入楼梯号:")
+    room_num_str = input("请输入房间号:")
     resident_dict = {
         "姓名:": name_str,
-        "性别:": sex_str,
-        "年龄:": age_str,
-        "电话:":tel_str,
-        "地址:":addr_str
+        "小区名:": add_str,
+        "楼梯号:": stais_num_str,
+        "房间号:": room_num_str,
     }
     resident_list.append(resident_dict)
     print("*" * 33)
@@ -41,17 +39,16 @@ def show_all():
     if len(resident_list) == 0:
         print("当前没有任何居民的信息")
         return
-    for title in ["姓名", "性别", "年龄","电话","地址"]:
+    for title in ["姓名", "小区名", "楼梯号", "房间号"]:
         print(title, end="\t\t")
     print("")
     print("*" * 41)
     for resident_dict in resident_list:
-        print("%s\t\t%s\t\t%s\t\t%s\t\t%s\t" %
+        print("%s\t\t%s\t\t%s\t\t%s\t" %
               (resident_dict["姓名:"],
-               resident_dict["性别:"],
-               resident_dict["年龄:"],
-               resident_dict["电话:"],
-               resident_dict["地址:"]))
+               resident_dict["小区名:"],
+               resident_dict["楼梯号:"],
+               resident_dict["房间号:"]))
     print("*" * 41)
 
 
@@ -63,18 +60,17 @@ def search_resident():
     for resident_dict in resident_list:
         if resident_dict["姓名:"] == find_name:
             print("找到了%s的信息,具体如下" % find_name)
-            print("*"*41)
-            print("姓名\t\t性别\t\t年龄\t\t电话\t\t地址")
-            print("-"*41)
-            print("%s\t\t%s\t\t%s\t\t%s\t\t%s\t" %
+            print("*" * 41)
+            print("姓名\t\t小区名\t\t楼梯号\t\t房间号")
+            print("-" * 41)
+            print("%s\t\t%s\t\t%s\t\t%s\t" %
                   (resident_dict["姓名:"],
-                   resident_dict["性别:"],
-                   resident_dict["年龄:"],
-                   resident_dict["电话:"],
-                   resident_dict["地址:"]))
+                   resident_dict["小区名:"],
+                   resident_dict["楼梯号:"],
+                   resident_dict["房间号:"]))
             print("*" * 41)
             break
         else:
-           print("抱歉，没有找到%s的任何信息" % find_name)
-           print("*"*41)
-           break
+            print("抱歉，没有找到%s的任何信息" % find_name)
+            print("*" * 41)
+            break
