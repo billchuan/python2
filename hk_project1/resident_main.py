@@ -1,3 +1,4 @@
+# 作业8居民管理系统
 import hk_project1.resident_tools
 
 while True:
