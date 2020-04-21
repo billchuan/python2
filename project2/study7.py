@@ -22,3 +22,13 @@
 # dog = Dog()
 # dog.sleep()
 # dog.bark()
+
+
+# 创建只包含方法的简单类
+class person:
+    # 类的方法
+    def run(self):
+        print("喜欢跑步")
+
+    def eat(self):
+        print("喜欢吃东西")
