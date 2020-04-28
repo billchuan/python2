@@ -1,4 +1,4 @@
-# 4月28日学习
+# 4月28日五、六节课学习
 import pymysql
 
 # 连接数据库
@@ -20,7 +20,7 @@ try:
     print("修改成功")
     cursor.execute(sql_2)
     print("*********************************增加*********************************")
-    sql_3 = "insert into person values(4,'tom',20)"
+    sql_3 = "insert into person values(4,'jack',20)"
     print("增加成功")
     cursor.execute(sql_3)
     cursor.close()
