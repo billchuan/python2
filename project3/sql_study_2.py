@@ -3,7 +3,7 @@ import pymysql
 
 # 连接数据库
 try:
-    conn = pymysql.connect(host="127.0.0.1", port=3306, user="root", passwd="root", db="db01", charset="GBK")
+    conn = pymysql.connect(host="localhost", port=3306, user="root", passwd="root", db="db01", charset="GBK")
     print("连接成功")
 
     # 查询
@@ -16,12 +16,14 @@ try:
         print("ID=%s,Name=%s,Age=%s" % (row[0], row[1], row[2]))  # 输出结果
         row = cursor.fetchone()
     print("*********************************修改*********************************")
-    sql_2="update person set name='jack' where id='3'"
+    sql_2 = "update person set name='jack' where id='3'"
     print("修改成功")
     cursor.execute(sql_2)
+    print("*********************************增加*********************************")
+    sql_3 = "insert into person values(4,'tom',20)"
+    print("增加成功")
+    cursor.execute(sql_3)
     cursor.close()
     conn.close()
 except Exception as err:
     print(err)
-
-
