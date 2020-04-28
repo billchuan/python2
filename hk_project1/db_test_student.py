@@ -37,11 +37,13 @@ class StudentDB:
         try:
             file_obj = open("C:\\Users\\Lenovo\\Desktop\\whc.txt", "a")
             self.cursor.execute("select *from student")
+            file_obj.write("*"*40+"\n")
             file_obj.write("序号\t姓名\t班级\t年龄\n")
             rows = self.cursor.fetchall()
             for row in rows:
                 print(row)
                 file_obj.write(str(row[0]) + "\t" + row[1] + "\t" + str(row[2]) + "\t" + str(row[3]) + "\n")
+            file_obj.write("*"*40)
             file_obj.close()
             print("成绩导出完毕")
         except Exception as err:
