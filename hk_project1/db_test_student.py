@@ -8,7 +8,7 @@ class StudentDB:
         create table student(
         id int primary key,
         name varchar(20),
-        banji int,
+        banjihao int,
         age int
         )
         """
@@ -22,11 +22,11 @@ class StudentDB:
             print(err)
 
     # 添加
-    def insert_data(self, id, name, banji, age):
+    def insert_data(self, id, name, banjihao, age):
         try:
-            sql = "insert into student(id,name,banji,age) values (%s,%s,%s,%s)"
+            sql = "insert into student(id,name,banjihao,age) values (%s,%s,%s,%s)"
             print(sql)
-            self.cursor.execute(sql, (id, name, banji, age))
+            self.cursor.execute(sql, (id, name, banjihao, age))
             print("插入成功")
         except Exception as err:
             print("插入失败")
@@ -35,10 +35,10 @@ class StudentDB:
     # 导出
     def export(self):
         try:
-            file_obj = open("C:\\Users\\Lenovo\\Desktop\\whc.txt", "a")
+            file_obj = open("C:\\Users\\Lenovo\\Desktop\\WangHaiChuan.txt", "a")
             self.cursor.execute("select *from student")
             file_obj.write("*"*40+"\n")
-            file_obj.write("序号\t姓名\t班级\t年龄\n")
+            file_obj.write("序号\t姓名\t班级号\t年龄\n")
             rows = self.cursor.fetchall()
             for row in rows:
                 print(row)
@@ -60,6 +60,7 @@ student = StudentDB()
 student.create_table()
 student.insert_data(1, "zhangsan", 10, 20)
 student.insert_data(2, "lisi", 10, 25)
-student.insert_data(3, "wangwu", 10, 21)
+student.insert_data(3, "wangwu", 10, 22)
+student.insert_data(4, "王海川", 10, 21)
 student.export()
 student.close_conn()
