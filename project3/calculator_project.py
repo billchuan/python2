@@ -23,6 +23,7 @@ opt = 0  # 获取输入的数字
 ope = ""  # 保存操作符
 save = 0  # 保存前一个运算数字
 
+
 def calc(event):
     global opt
     global ope
