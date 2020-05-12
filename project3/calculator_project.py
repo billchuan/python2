@@ -13,10 +13,10 @@ ent = tk.Entry(win, textvariable=result)
 ent.place(x=0, y=0, width=240, height=24)
 
 # 创建键盘区
-txts = ["1", "2", "3", "+",
-        "4", "5", "6", "-",
-        "7", "8", "9", "*",
-        "C", "0", "=", "/"]
+btn_list = ["1", "2", "3", "+",
+            "4", "5", "6", "-",
+            "7", "8", "9", "*",
+            "C", "0", "=", "/"]
 
 # 添加功能
 opt = 0  # 获取输入的数字
@@ -29,17 +29,21 @@ def calc(event):
     global opt
     global ope
     global save
-    if event.widget["text"] in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+    # 点击数字键盘1-9
+    if event.widget["text"] in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:  # 获取被点击按钮的文本
         opt = opt * 10 + int(event.widget["text"])
         result.set(str(opt))
+    # 点击加、减、乘、除
     elif event.widget["text"] in ["+", "-", "*", "/"]:
         save = opt
         ope = event.widget["text"]
         opt = 0
         result.set("0")
+    # 点击C清空按钮
     elif event.widget["text"] == "C":
         opt = 0
         result.set("0")
+    # 点击等于号
     elif event.widget["text"] == "=":
         if ope == "+":
             result.set(str(save + opt))
@@ -53,7 +57,7 @@ def calc(event):
 
 for i in range(16):
     strBtn = tk.StringVar()
-    strBtn.set(txts[i])
+    strBtn.set(btn_list[i])
     btn = tk.Button(win, textvariable=strBtn)
     btn.place(x=i % 4 * 60, y=i // 4 * 60 + 24, width=60, height=60)
     btn.bind("<Button-1>", calc)
