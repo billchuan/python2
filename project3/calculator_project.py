@@ -25,6 +25,7 @@ save = 0  # 保存前一个运算数字
 
 
 def calc(event):
+    """计算机的加减乘除功能"""
     global opt
     global ope
     global save
