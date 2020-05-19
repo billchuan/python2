@@ -33,17 +33,27 @@
 # 3.私有属性和私有方法
 # java中私有属性 private int a = 1
 # python中私有属性
-class Animal:
+class A:
     def __init__(self):
         self.name1 = "张三"  # 公有属性
         self.__name2 = "李四"  # 私有属性
 
     def test(self):  # 公有方法
-        print(self.__name2)
+        print(self.__name2)  # 在类的内部能够调用私有方法
+
+
+class B(A):
+    def testb(self):
+        pass
 
 
 # 在外部自己用
-a = Animal()
-print(a.name1)
+a = A()
+# print(a.name1)
 # print(a.__name2) # 不能用
-a.test()  # 调用公共方法
+# a.test()  # 调用公共方法
+
+# 在外部子类用
+b = B()
+# print(b.name1)  # 子类调用父类的公有属性
+# print(b.__name2)  # 子类调用父类的私有属性(无法使用)
