@@ -19,9 +19,10 @@ class Student(object):
 
 
 # 主程序
-s = Student("王海川")
-s = Student("李四")
-s = Student("王五")
-s.welcome_info()
+s1 = Student("王海川")
+s2 = Student("李四")
+s3 = Student("王五")
+s4 = Student("张三")
+Student.welcome_info()
 Student.show_student_count()
-s.login_system()
+s1.login_system()
