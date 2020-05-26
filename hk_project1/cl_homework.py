@@ -7,7 +7,7 @@ class Student(object):
         Student.student_count += 1
 
     @staticmethod
-    def welcom_info():
+    def welcome_info():
         print("欢迎访问学生管理系统")
 
     @classmethod
@@ -20,6 +20,6 @@ class Student(object):
 
 # 主程序
 s = Student("王海川")
-s.welcom_info()
+s.welcome_info()
 s.show_student_count()
 s.login_system()
